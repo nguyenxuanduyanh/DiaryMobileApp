@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var authController = AuthController()
     var body: some View {
-        LoginScreen()
+        if authController.session != nil {
+            HomeScreen()
+        } else {
+            LoginScreen()
+        }
     }
 }
 #Preview {

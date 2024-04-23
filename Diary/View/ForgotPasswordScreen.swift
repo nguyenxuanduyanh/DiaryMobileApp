@@ -1,18 +1,16 @@
 //
-//  LoginScreen.swift
+//  ForgotPasswordScreen.swift
 //  Diary
 //
-//  Created by Duy Anh Nguyễn Xuân on 4/6/24.
+//  Created by Duy Anh Nguyễn Xuân on 4/17/24.
 //
 
 import SwiftUI
 
-struct LoginScreen: View {
+struct ForgotPassword: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State private var email = ""
-    @State private var password = ""
-    @State private var showPassword = false
-    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -30,26 +28,6 @@ struct LoginScreen: View {
                             Text("EMAIL").font(.system(size: 24)).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             Spacer().frame(height: 12)
                             TextField("Email address", text: $email).font(.system(size: 22))
-                            Spacer().frame(height: 24)
-                            Text("PASSWORD").font(.system(size: 24)).fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            Spacer().frame(height: 12)
-                            ZStack(alignment: Alignment(horizontal: .trailing, vertical: .center)) {
-                                if !showPassword {
-                                    SecureField("Your password", text: $password).font(.system(size: 22))
-                                } else {
-                                    TextField("Your password", text: $password).font(.system(size: 22))
-                                }
-                                Button(action: {
-                                    showPassword = !showPassword
-                                }) {
-                                    if !showPassword {
-                                        Image(systemName: "eye").frame(width: 32, height:  24).foregroundColor(.black)
-                                    } else {
-                                        Image(systemName: "eye.slash").frame(width: 32, height:  24).foregroundColor(.black)
-                                    }
-                                    
-                                }
-                            }
                             Spacer().frame(height: 48)
                             
                         }.frame(minWidth: 0,
@@ -62,31 +40,20 @@ struct LoginScreen: View {
                     VStack (alignment: .center){
                         Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
                             HStack {
-                                Text("Login").font(.system(size: 22)).foregroundStyle(Color(.white))
+                                Text("Get password").font(.system(size: 22)).foregroundStyle(Color(.white))
                             }.frame(width: 200)
                         }.padding(EdgeInsets(top: 12, leading: 0, bottom: 12, trailing: 0)).background(Color(hex: "F27171")).cornerRadius(24)
                         
                     }.frame(minWidth: 0,
                             maxWidth: .infinity,
                             minHeight: 0).padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16)).offset(y: -40)
-                    Spacer().frame(height: 8)
-                    HStack() {
-                        Spacer()
-                        NavigationLink {
-                            RegisterScreen()
-                        } label: {
-                            Text("Signup").foregroundColor(.white).font(.system(size: 18)).underline()
-                        }
-                        
-                        Spacer()
-                    }
                     Spacer()
                     HStack() {
                         Spacer()
-                        NavigationLink {
-                            ForgotPassword()
-                        } label: {
-                            Text("Forgot Password?").foregroundColor(.white).font(.system(size: 18)).underline()
+                        Button(action: {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }) {
+                            Text("Login").foregroundColor(.white).font(.system(size: 18)).underline()
                         }
                         Spacer()
                     }
@@ -107,5 +74,5 @@ struct LoginScreen: View {
 }
 
 #Preview {
-    LoginScreen()
+    ForgotPassword()
 }

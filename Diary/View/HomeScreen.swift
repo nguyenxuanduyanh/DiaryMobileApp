@@ -1,0 +1,18 @@
+//
+//  HomeScreen.swift
+//  Diary
+//
+//  Created by Duy Anh Nguyễn Xuân on 4/17/24.
+//
+
+import SwiftUI
+
+struct HomeScreen: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+#Preview {
+    HomeScreen()
+}
