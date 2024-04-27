@@ -15,6 +15,9 @@
 		FC59D0982BD04A520067CD8D /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC59D0972BD04A520067CD8D /* ForgotPasswordScreen.swift */; };
 		FC6627BE2BC1FBA5004569A3 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6627BD2BC1FBA5004569A3 /* LoginScreen.swift */; };
 		FC6627C32BC1FBEB004569A3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6627C22BC1FBEB004569A3 /* Color.swift */; };
+		FCA6544D2BD9A85D001EB242 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6544C2BD9A85D001EB242 /* HomeController.swift */; };
+		FCA6544F2BD9A876001EB242 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA6544E2BD9A876001EB242 /* ForgotPasswordController.swift */; };
+		FCA654522BD9A90B001EB242 /* AppLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA654512BD9A90B001EB242 /* AppLoading.swift */; };
 		FCB620EC2BD7989A0072699D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCB620EB2BD7989A0072699D /* GoogleService-Info.plist */; };
 		FCB620EF2BD7994E0072699D /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FCB620EE2BD7994E0072699D /* FirebaseAnalytics */; };
 		FCB620F12BD7994E0072699D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FCB620F02BD7994E0072699D /* FirebaseAuth */; };
@@ -55,6 +58,10 @@
 		FC59D0972BD04A520067CD8D /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
 		FC6627BD2BC1FBA5004569A3 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		FC6627C22BC1FBEB004569A3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		FCA094192BDCD0B6003928AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FCA6544C2BD9A85D001EB242 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		FCA6544E2BD9A876001EB242 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
+		FCA654512BD9A90B001EB242 /* AppLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoading.swift; sourceTree = "<group>"; };
 		FCB620EB2BD7989A0072699D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCCFAEC42BBE6E0E00F3627C /* Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCFAEC72BBE6E0E00F3627C /* DiaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryApp.swift; sourceTree = "<group>"; };
@@ -103,6 +110,8 @@
 				FC59D08D2BD048740067CD8D /* RegisterController.swift */,
 				FC59D08F2BD0489C0067CD8D /* LoginController.swift */,
 				FC59D0912BD048AD0067CD8D /* AuthController.swift */,
+				FCA6544C2BD9A85D001EB242 /* HomeController.swift */,
+				FCA6544E2BD9A876001EB242 /* ForgotPasswordController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,6 +133,14 @@
 				FC6627C22BC1FBEB004569A3 /* Color.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		FCA654502BD9A8F5001EB242 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FCA654512BD9A90B001EB242 /* AppLoading.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FCCFAEBB2BBE6E0E00F3627C = {
@@ -150,6 +167,8 @@
 		FCCFAEC62BBE6E0E00F3627C /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				FCA094192BDCD0B6003928AB /* Info.plist */,
+				FCA654502BD9A8F5001EB242 /* Components */,
 				FC59D08C2BD048620067CD8D /* Controller */,
 				FC6627BF2BC1FBC2004569A3 /* Constants */,
 				FC6627BC2BC1FB74004569A3 /* View */,
@@ -327,10 +346,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC59D08E2BD048740067CD8D /* RegisterController.swift in Sources */,
+				FCA6544F2BD9A876001EB242 /* ForgotPasswordController.swift in Sources */,
 				FC59D0982BD04A520067CD8D /* ForgotPasswordScreen.swift in Sources */,
+				FCA6544D2BD9A85D001EB242 /* HomeController.swift in Sources */,
 				FC59D0902BD0489C0067CD8D /* LoginController.swift in Sources */,
 				FCCFAECA2BBE6E0E00F3627C /* ContentView.swift in Sources */,
 				FC6627C32BC1FBEB004569A3 /* Color.swift in Sources */,
+				FCA654522BD9A90B001EB242 /* AppLoading.swift in Sources */,
 				FC59D0942BD04A2F0067CD8D /* RegisterScreen.swift in Sources */,
 				FC59D0962BD04A420067CD8D /* HomeScreen.swift in Sources */,
 				FCCFAEC82BBE6E0E00F3627C /* DiaryApp.swift in Sources */,
@@ -501,6 +523,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Diary/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Diary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -529,6 +552,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Diary/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Diary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
