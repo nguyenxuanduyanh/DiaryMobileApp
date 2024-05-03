@@ -13,6 +13,8 @@ import FirebaseFirestore
 import Firebase
 import FirebaseStorage
 
+// https://developer.apple.com/documentation/photokit/bringing_photos_picker_to_your_swiftui_app#4087572
+
 enum TransferError: Error {
     case importFailed
 }
@@ -54,7 +56,6 @@ class CreateDiaryController: ObservableObject {
         let milliseconds = Int(date.timeIntervalSince1970 * 1000)
         let storageRef = storage.reference()
         let imagesRef = storageRef.child("images/image-story-\(milliseconds).jpg")
-        print("image url \(imageUrl)")
         if (imageUrl != nil) {
             
             _ = imagesRef.putFile(from: imageUrl!, metadata: nil) { metadata, error in
@@ -64,7 +65,6 @@ class CreateDiaryController: ObservableObject {
                     self.isLoading = false
                     return
                 }
-                print("upload image success")
                 imagesRef.downloadURL { (url, error) in
                     guard let downloadURL = url else {
                         // Uh-oh, an error occurred!
@@ -72,12 +72,12 @@ class CreateDiaryController: ObservableObject {
                         print("error 1234 \(error)")
                         return
                     }
-                    print("download url \(downloadURL)")
+                    
                     let docData: [String: Any] = [
                         "created": milliseconds,
                         "content": self.content,
                         "uid": uid ?? NSNull(),
-                        "image": downloadURL.path()
+                        "image": downloadURL.description
                     ]
                     self.db.collection("stories").document().setData(docData) { result in
                         
