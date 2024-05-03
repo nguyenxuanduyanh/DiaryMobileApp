@@ -30,6 +30,9 @@
 		FCCFAED92BBE6E0F00F3627C /* DiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCFAED82BBE6E0F00F3627C /* DiaryTests.swift */; };
 		FCCFAEE32BBE6E0F00F3627C /* DiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCFAEE22BBE6E0F00F3627C /* DiaryUITests.swift */; };
 		FCCFAEE52BBE6E0F00F3627C /* DiaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCFAEE42BBE6E0F00F3627C /* DiaryUITestsLaunchTests.swift */; };
+		FCED40D82BE5894E00CADEA5 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCED40D72BE5894E00CADEA5 /* DetailScreen.swift */; };
+		FCF5254B2BDEDAE800AAC292 /* CreateDiaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF5254A2BDEDAE800AAC292 /* CreateDiaryController.swift */; };
+		FCF5254D2BDEE55100AAC292 /* CreateDiaryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF5254C2BDEE55100AAC292 /* CreateDiaryScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,9 @@
 		FCCFAEDE2BBE6E0F00F3627C /* DiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCFAEE22BBE6E0F00F3627C /* DiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUITests.swift; sourceTree = "<group>"; };
 		FCCFAEE42BBE6E0F00F3627C /* DiaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCED40D72BE5894E00CADEA5 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		FCF5254A2BDEDAE800AAC292 /* CreateDiaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryController.swift; sourceTree = "<group>"; };
+		FCF5254C2BDEE55100AAC292 /* CreateDiaryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 				FC59D0912BD048AD0067CD8D /* AuthController.swift */,
 				FCA6544C2BD9A85D001EB242 /* HomeController.swift */,
 				FCA6544E2BD9A876001EB242 /* ForgotPasswordController.swift */,
+				FCF5254A2BDEDAE800AAC292 /* CreateDiaryController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,6 +130,8 @@
 				FC59D0932BD04A2F0067CD8D /* RegisterScreen.swift */,
 				FC59D0952BD04A420067CD8D /* HomeScreen.swift */,
 				FC59D0972BD04A520067CD8D /* ForgotPasswordScreen.swift */,
+				FCF5254C2BDEE55100AAC292 /* CreateDiaryScreen.swift */,
+				FCED40D72BE5894E00CADEA5 /* DetailScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -345,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCED40D82BE5894E00CADEA5 /* DetailScreen.swift in Sources */,
 				FC59D08E2BD048740067CD8D /* RegisterController.swift in Sources */,
 				FCA6544F2BD9A876001EB242 /* ForgotPasswordController.swift in Sources */,
 				FC59D0982BD04A520067CD8D /* ForgotPasswordScreen.swift in Sources */,
@@ -354,6 +364,8 @@
 				FC6627C32BC1FBEB004569A3 /* Color.swift in Sources */,
 				FCA654522BD9A90B001EB242 /* AppLoading.swift in Sources */,
 				FC59D0942BD04A2F0067CD8D /* RegisterScreen.swift in Sources */,
+				FCF5254D2BDEE55100AAC292 /* CreateDiaryScreen.swift in Sources */,
+				FCF5254B2BDEDAE800AAC292 /* CreateDiaryController.swift in Sources */,
 				FC59D0962BD04A420067CD8D /* HomeScreen.swift in Sources */,
 				FCCFAEC82BBE6E0E00F3627C /* DiaryApp.swift in Sources */,
 				FC59D0922BD048AD0067CD8D /* AuthController.swift in Sources */,
